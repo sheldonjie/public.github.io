@@ -1,37 +1,41 @@
-## Welcome to GitHub Pages
+## 第一章 | 算法
 
-You can use the [editor on GitHub](https://github.com/sheldonjie/public.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### 1.算法的基本概念
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+#### 1.1 算法：指解题方案的准确而完整的描述，是一组严谨地定义运算顺序的规则，并且每一个规则都是有效的，且是明确的，此顺序将在有限的次数下终止。
 
-### Markdown
+> 算法不等于程序，也不等于计算方法，但程序可以算法的一种描述。
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+#### 1.2 基本特征
 
-```markdown
-Syntax highlighted code block
+1. **可行性** ：算法中的每一个步骤必须能够实现；算法执行的结果要能够达到预期的目的；
+1. **确定性** ：算法中的每一个步骤都必须有明确定义的，不允许有多义性；
+1. **有穷性** ：算法必须能在有效的时间内做完，即算法必须能在执行有限个步骤之后终止，包含合理的执行时间的含义；
+1. **拥有足够的情报。**
 
-# Header 1
-## Header 2
-### Header 3
+### 2.算法设计基本方法
 
-- Bulleted
-- List
+1. **列举法** ：根据提出的问题，列举所有可能的情况，检验需要或不需要；
+1. **归纳法** ：通过列举少量的特殊情况，找出一般的关系、结论；
+1. **递推** ：从已知的初始条件出发，逐次推出所要求的各中间结果和最后结果；
+ > 本质上属于归纳
+ > 注意数值计算的稳定性问题
+4. **递归** ：一般总是将问题逐层分解，最后归纳为一些最简单的问题；
+ > 递归的基础是归纳
+ - 直接递归：一个算法P显式地调用自己
+ - 间接递归：算法P调用另一个算法Q，而算法Q又调用算法P
+5. **减半递推技术** ：“减半”指将问题的规模减半，而问题的性质不变；“递推”指重复“减半”的过程。
+ > 实际问题的复杂程度往往与问题的规模有着密切关系。因此利用分治法解决这类实际问题是有效的。
 
-1. Numbered
-2. List
+### 3.算法复杂度
 
-**Bold** and _Italic_ and `Code` text
+- 时间复杂度
+- 空间复杂度
 
-[Link](url) and ![Image](src)
-```
+#### 3.1 时间复杂度
+指执行算法所需要的计算工作量
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#### 3.2 空间复杂度
+一般是指执行算法所需要的内存空间
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sheldonjie/public.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+> 一个算法所占用的存储空间包括算法程序所占的空间、输入的初始数据所占的存储空间以及算法执行过程中所需要的额外空间。
